@@ -1,0 +1,20 @@
+{
+  "name": "dota-ai-pick-overlay",
+  "main": "dist/main.js",
+  "version": "0.1.0",
+  "description": "Overlay for dota",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "lint": "tslint -c tslint.json -p tsconfig.json",
+    "electron:run": "electron .",
+    "start": "yarn build && electron ."
+  },
+  "repository": "git@github.com:Luchanso/dota-ai-pick-overlay.git",
+  "author": "GitHub",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "8.0.0-beta.3",
+    "typescript": "3.7.2"
+  }
+}
