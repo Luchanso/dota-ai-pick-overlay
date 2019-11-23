@@ -1,5 +1,4 @@
 import { app, BrowserWindow } from "electron";
-import * as path from "path";
 
 let mainWindow: Electron.BrowserWindow;
 
@@ -8,9 +7,13 @@ function createWindow() {
   mainWindow = new BrowserWindow({
     height: 600,
     width: 800,
+    webPreferences: {
+      nodeIntegration: true,
+      nodeIntegrationInWorker: true
+    }
   });
 
-  mainWindow.loadURL('http://ya.ru');
+  mainWindow.loadURL('http://localhost:3000');
 
   // Emitted when the window is closed.
   mainWindow.on("closed", () => {
